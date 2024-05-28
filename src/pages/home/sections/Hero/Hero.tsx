@@ -11,10 +11,16 @@ const Hero = () => {
     height: "100vh",
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.up("xs")]: {
+      paddingTop: "6.25rem",
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "0",
+    },
   }));
 
   const StyledImg = styled("img")(({ theme }) => ({
-    width: "80%",
+    width: "75%",
     borderRadius: "50%",
     border: `0.0625rem solid ${theme.palette.primary.contrastText}`,
   }));
